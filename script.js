@@ -1,3 +1,4 @@
+
 const welcomeBtn = document.getElementById("welcomeBtn");
 const welcomeMessage = document.getElementById("welcomeMessage");
 
