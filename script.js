@@ -1,39 +1,43 @@
-// 1. Dark Mode Toggle
-const themeToggle = document.getElementById("theme-toggle");
+
+// 1. Welcome Message
+const welcomeBtn = document.getElementById("welcomeBtn");
+const welcomeMessage = document.getElementById("welcomeMessage");
+
+welcomeBtn.addEventListener("click", function () {
+    welcomeMessage.textContent =
+        "Hello! Thank you for visiting my portfolio. Have a great day!";
+});
+
+
+// 2. Dark Mode Toggle
+const themeToggle = document.getElementById("themeToggle");
 
 themeToggle.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
         themeToggle.textContent = "☀️";
+        themeToggle.setAttribute("aria-label", "Switch to light mode");
     } else {
         themeToggle.textContent = "🌙";
+        themeToggle.setAttribute("aria-label", "Switch to dark mode");
     }
 });
 
 
-// 2. Project Search
-const searchInput = document.getElementById("project-search");
-const categoryFilter = document.getElementById("category-filter");
+// 3. Project Search
+const projectSearch = document.getElementById("projectSearch");
 const projectCards = document.querySelectorAll(".project-card");
-const noResults = document.getElementById("no-results");
+const noProjects = document.getElementById("noProjects");
 
-function filterProjects() {
-    const searchText = searchInput.value.toLowerCase();
-    const selectedCategory = categoryFilter.value;
-
+projectSearch.addEventListener("input", function () {
+    const searchText = projectSearch.value.toLowerCase();
     let visibleProjects = 0;
 
     projectCards.forEach(function (card) {
         const projectText = card.textContent.toLowerCase();
-        const projectCategory = card.dataset.category;
 
-        const matchesSearch = projectText.includes(searchText);
-        const matchesCategory =
-            selectedCategory === "all" ||
-            projectCategory === selectedCategory;
-
-        if (matchesSearch && matchesCategory) {
+        if (projectText.includes(searchText)) {
             card.style.display = "block";
             visibleProjects++;
         } else {
@@ -41,34 +45,26 @@ function filterProjects() {
         }
     });
 
-    noResults.hidden = visibleProjects !== 0;
-}
-
-searchInput.addEventListener("input", filterProjects);
-
-
-// 3. Project Category Filter
-categoryFilter.addEventListener("change", filterProjects);
-
-
-// 4. Reading Progress Bar
-const progressBar = document.getElementById("progress-bar");
-
-window.addEventListener("scroll", function () {
-    const scrollTop = window.scrollY;
-    const documentHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-
-    const progress = documentHeight > 0
-        ? (scrollTop / documentHeight) * 100
-        : 0;
-
-    progressBar.style.width = progress + "%";
+    noProjects.hidden = visibleProjects !== 0;
 });
 
 
+// 4. Live Digital Clock
+const liveClock = document.getElementById("liveClock");
+
+function updateClock() {
+    const now = new Date();
+
+    liveClock.textContent = "Current time: " +
+        now.toLocaleTimeString();
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+
 // 5. Back to Top Button
-const backToTop = document.getElementById("back-to-top");
+const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
@@ -86,65 +82,32 @@ backToTop.addEventListener("click", function () {
 });
 
 
-// 6. Project Details Popup
-const modal = document.getElementById("project-modal");
-const modalTitle = document.getElementById("modal-title");
-const modalDescription = document.getElementById("modal-description");
-const modalClose = document.getElementById("modal-close");
-const detailButtons = document.querySelectorAll(".details-btn");
-
-detailButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-        modalTitle.textContent = button.dataset.title;
-        modalDescription.textContent = button.dataset.description;
-
-        modal.classList.add("show");
-        modal.setAttribute("aria-hidden", "false");
-        modalClose.focus();
-    });
-});
-
-function closeModal() {
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-}
-
-modalClose.addEventListener("click", closeModal);
-
-modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
-        closeModal();
-    }
-});
-
-
-// Close popup using Escape key
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && modal.classList.contains("show")) {
-        closeModal();
-    }
-});
-
-
-// 7. Mobile Navigation
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+// 6. Mobile Navigation Menu
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
 menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
 
-    const isExpanded = navLinks.classList.contains("active");
-    menuToggle.setAttribute("aria-expanded", isExpanded);
+    const isOpen = navLinks.classList.contains("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 });
 
+// Close mobile menu after clicking a navigation link
 document.querySelectorAll(".nav-links a").forEach(function (link) {
     link.addEventListener("click", function () {
         navLinks.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
     });
 });
 
 
-// 8. Automatic Copyright Year
-document.getElementById("year").textContent =
+// 7. Automatic Copyright Year
+document.getElementById("currentYear").textContent =
     new Date().getFullYear();
