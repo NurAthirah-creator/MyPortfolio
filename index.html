@@ -4,28 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Portfolio | Nur Athirah</title>
-
-    <meta name="description"
-          content="My personal portfolio, skills and projects.">
-
+    <meta name="description" content="Nur Athirah Binti Sabli's personal portfolio website.">
+    <title>Nur Athirah | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <!-- Navigation -->
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <a class="logo" href="#home">MyPortfolio.</a>
+        <nav class="navbar">
+            <a href="#home" class="logo">Athirah<span>.</span></a>
 
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About Me</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="themeToggle" class="theme-btn"
+                    type="button" aria-label="Toggle dark mode">
+                🌙
+            </button>
         </nav>
     </header>
 
@@ -33,74 +41,219 @@
 
         <!-- Home Section -->
         <section id="home" class="hero">
-            <p class="intro">HELLO, WELCOME TO MY PORTFOLIO</p>
+            <div class="hero-content">
+                <p class="intro-label">WELCOME TO MY PORTFOLIO</p>
 
-            <h1>Hi, I'm Nur Athirah Binti Sabli.</h1>
+                <h1>Hi, I'm <span>Nur Athirah Binti Sabli</span></h1>
 
-            <p class="hero-text">
-                I am a Multimedia Computing student who enjoys learning new things, exploring creativity and trying to become a better version of myself every day.
-            </p>
-            
-            <button id="welcomeBtn" type="button">Say Hello</button>
+                <h2>Multimedia Computing Student</h2>
 
-            <p id="welcomeMessage" aria-live="polite"></p>
+                <p>
+                    I am a Multimedia Computing student who enjoys learning
+                    new things, exploring creativity and developing my
+                    technical skills. This portfolio showcases my learning
+                    journey, projects and interests.
+                </p>
 
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">
+                        View My Projects
+                    </a>
 
-            <a class="btn" href="#projects">View My Projects</a>
+                    <a href="#contact" class="btn secondary-btn">
+                        Contact Me
+                    </a>
+                </div>
+
+                <button id="welcomeBtn" class="welcome-btn" type="button">
+                    Say Hello
+                </button>
+
+                <p id="welcomeMessage" class="welcome-message"
+                   aria-live="polite"></p>
+
+                <p class="clock" id="liveClock" aria-live="off"></p>
+            </div>
+
+            <div class="hero-image">
+                <div class="profile-placeholder" role="img"
+                     aria-label="Decorative profile placeholder">
+                    NA
+                </div>
+            </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="section">
-            <h2>My Projects</h2>
+            <div class="section-heading">
+                <p class="section-label">MY WORK</p>
+                <h2>My Projects</h2>
+                <p>
+                    Here are some examples of my academic projects and
+                    learning activities.
+                </p>
+            </div>
 
-            <p class="section-intro">
-                Here are some projects I have worked on.
+            <div class="search-box">
+                <label for="projectSearch">Search projects</label>
+                <input type="text" id="projectSearch"
+                       placeholder="Type a project name...">
+            </div>
+
+            <div class="project-grid" id="projectGrid">
+
+                <article class="project-card">
+                    <div class="project-number">01</div>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>
+                        A personal website developed using HTML, CSS and
+                        JavaScript to introduce myself and showcase my work.
+                    </p>
+                    <span class="project-tag">Web Development</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">02</div>
+                    <h3>CampusGo System</h3>
+                    <p>
+                        An academic system design project that demonstrates
+                        system interactions and user activities.
+                    </p>
+                    <span class="project-tag">System Analysis</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">03</div>
+                    <h3>Scam Buster: Jangan Klik</h3>
+                    <p>
+                        A digital awareness project that shares information
+                        about online scams and safer internet practices.
+                    </p>
+                    <span class="project-tag">Digital Media</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">04</div>
+                    <h3>Learning Notes Infographic</h3>
+                    <p>
+                        A visual learning material designed to present
+                        important topics in a clear and organised way.
+                    </p>
+                    <span class="project-tag">Multimedia Design</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">05</div>
+                    <h3>Programming Exercises</h3>
+                    <p>
+                        Programming exercises completed to practise
+                        problem-solving and fundamental coding skills.
+                    </p>
+                    <span class="project-tag">Programming</span>
+                </article>
+
+            </div>
+
+            <p id="noProjects" class="no-projects" hidden>
+                No projects found. Try another keyword.
             </p>
-
-            
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="section about">
-            <h2>About Me</h2>
+        <section id="about" class="section about-section">
+            <div class="section-heading">
+                <p class="section-label">GET TO KNOW ME</p>
+                <h2>About Me</h2>
+            </div>
 
-            <p>
-                I am a student who enjoys learning and developing
-                new skills. I am interested in web development
-                and hope to gain more experience through projects.
-            </p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello! I'm Nur Athirah.</h3>
 
-            <h3>My Skills</h3>
+                    <p>
+                        I am a Multimedia Computing student with an interest
+                        in technology, web development and creative design.
+                        I enjoy exploring new ideas and improving my skills
+                        through practical projects.
+                    </p>
 
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                
-            </ul>
+                    <p>
+                        My goal is to continue learning, gain experience
+                        and become more confident in creating useful and
+                        creative digital solutions.
+                    </p>
+                </div>
+
+                <div class="skills">
+                    <h3>My Skills</h3>
+
+                    <div class="skill-item">
+                        <span>HTML</span>
+                        <div class="skill-bar">
+                            <div class="skill-level html-level"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level css-level"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level js-level"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>Creative Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-level design-level"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
+        <section id="contact" class="section contact-section">
+            <div class="section-heading">
+                <p class="section-label">GET IN TOUCH</p>
+                <h2>Contact Me</h2>
+                <p>
+                    Feel free to contact me through my email address.
+                    I would be happy to hear from you!
+                </p>
+            </div>
 
-            <p>
-                Feel free to contact me through email.
-            </p>
-
-            <a href="mailto: 105552@siswa.unimas.my">
-                105552@siswa.unimas.my
-            </a>
+            <div class="contact-card">
+                <div class="contact-icon">✉</div>
+                <h3>Email</h3>
+                <a href="mailto:105552@siswa.unimas.my">
+                    105552@siswa.unimas.my
+                </a>
+            </div>
         </section>
 
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" type="button"
+            aria-label="Back to top">
+        ↑
+    </button>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Nur Athirah. All rights reserved.</p>
+        <p>
+            &copy; <span id="currentYear"></span>
+            Nur Athirah Binti Sabli. All Rights Reserved.
+        </p>
+        <p>Designed and developed with HTML, CSS and JavaScript.</p>
     </footer>
-
-    <script src="script.js"></script>
 
 </body>
 </html>
