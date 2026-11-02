@@ -120,10 +120,9 @@ header {
     min-height: 620px;
     margin: auto;
     padding: 90px 25px;
-
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 50px;
 }
 
@@ -198,10 +197,16 @@ header {
     cursor: pointer;
 }
 
-.hero-image {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.welcome-message {
+    color: var(--primary);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.clock {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 15px;
 }
 
 .profile-placeholder {
@@ -209,11 +214,9 @@ header {
     height: 260px;
     border-radius: 50%;
     background: linear-gradient(135deg, #5365d8, #9b73cf);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: white;
     font-size: 65px;
     font-weight: bold;
@@ -454,14 +457,11 @@ footer {
     }
 
     .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding-top: 65px;
-}
-
-.hero-image {
-    justify-content: center;
-}
+        min-height: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 65px;
+    }
 
     .hero-buttons {
         justify-content: center;
