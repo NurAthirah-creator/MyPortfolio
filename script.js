@@ -1,15 +1,4 @@
-
-// 1. Welcome Message
-const welcomeBtn = document.getElementById("welcomeBtn");
-const welcomeMessage = document.getElementById("welcomeMessage");
-
-welcomeBtn.addEventListener("click", function () {
-    welcomeMessage.textContent =
-        "Hello! Thank you for visiting my portfolio. Have a great day!";
-});
-
-
-// 2. Dark Mode Toggle
+// 1. Dark Mode Toggle
 const themeToggle = document.getElementById("themeToggle");
 
 themeToggle.addEventListener("click", function () {
@@ -25,7 +14,7 @@ themeToggle.addEventListener("click", function () {
 });
 
 
-// 3. Project Search
+// 2. Project Search
 const projectSearch = document.getElementById("projectSearch");
 const projectCards = document.querySelectorAll(".project-card");
 const noProjects = document.getElementById("noProjects");
@@ -49,21 +38,7 @@ projectSearch.addEventListener("input", function () {
 });
 
 
-// 4. Live Digital Clock
-const liveClock = document.getElementById("liveClock");
-
-function updateClock() {
-    const now = new Date();
-
-    liveClock.textContent = "Current time: " +
-        now.toLocaleTimeString();
-}
-
-updateClock();
-setInterval(updateClock, 1000);
-
-
-// 5. Back to Top Button
+// 3. Back to Top Button
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", function () {
@@ -82,7 +57,7 @@ backToTop.addEventListener("click", function () {
 });
 
 
-// 6. Mobile Navigation Menu
+// 4. Mobile Navigation Menu
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -108,6 +83,6 @@ document.querySelectorAll(".nav-links a").forEach(function (link) {
 });
 
 
-// 7. Automatic Copyright Year
+// 5. Automatic Copyright Year
 document.getElementById("currentYear").textContent =
     new Date().getFullYear();
