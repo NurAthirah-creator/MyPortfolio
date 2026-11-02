@@ -1,3 +1,4 @@
+
 /* General Settings */
 * {
     margin: 0;
@@ -141,12 +142,10 @@ header {
     font-size: clamp(32px, 5vw, 52px);
     line-height: 1.2;
     margin: 15px 0;
-    color: var(--text);
 }
 
-/* Blue styled name for both Light and Dark Mode */
 .hero h1 span {
-    color: var(--primary);
+    color: #000000;
 }
 
 .hero h2 {
@@ -187,6 +186,27 @@ header {
 .secondary-btn {
     border: 2px solid var(--primary);
     color: var(--primary);
+}
+
+.welcome-btn {
+    border: none;
+    border-radius: 8px;
+    background: var(--secondary);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.welcome-message {
+    color: var(--primary);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.clock {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 15px;
 }
 
 .profile-placeholder {
