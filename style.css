@@ -197,18 +197,6 @@ header {
     cursor: pointer;
 }
 
-.welcome-message {
-    color: var(--primary);
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.clock {
-    font-size: 14px;
-    color: var(--muted);
-    margin-top: 15px;
-}
-
 .profile-placeholder {
     width: 260px;
     height: 260px;
