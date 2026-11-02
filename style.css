@@ -446,15 +446,18 @@ footer {
     }
 
     .hero {
-        min-height: auto;
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 65px;
-    }
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 65px;
+}
 
-    .hero-buttons {
-        justify-content: center;
-    }
+.hero-image {
+    justify-content: center;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
 
     .about-content {
         grid-template-columns: 1fr;
