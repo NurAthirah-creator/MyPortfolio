@@ -120,9 +120,10 @@ header {
     min-height: 620px;
     margin: auto;
     padding: 90px 25px;
-    display: flex;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: 50px;
 }
 
@@ -197,14 +198,22 @@ header {
     cursor: pointer;
 }
 
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .profile-placeholder {
     width: 260px;
     height: 260px;
     border-radius: 50%;
     background: linear-gradient(135deg, #5365d8, #9b73cf);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     color: white;
     font-size: 65px;
     font-weight: bold;
