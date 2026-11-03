@@ -157,7 +157,7 @@ header {
 }
 
 .hero h1 span {
-    color: #000000;
+    color: var(--primary);
 }
 
 .hero h2 {
