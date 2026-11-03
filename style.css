@@ -1,7 +1,5 @@
 
-/* ==============================
-   GENERAL SETTINGS
-================================= */
+/* GENERAL SETTINGS */
 
 * {
     margin: 0;
@@ -59,9 +57,7 @@ input:focus-visible {
 }
 
 
-/* ==============================
-   NAVIGATION BAR
-================================= */
+/*  NAVIGATION BAR */
 
 header {
     position: sticky;
@@ -123,9 +119,7 @@ header {
 }
 
 
-/* ==============================
-   HOME SECTION
-================================= */
+/* HOME SECTION */
 
 .hero {
     max-width: 1150px;
@@ -216,9 +210,7 @@ header {
 }
 
 
-/* ==============================
-   GENERAL SECTIONS
-================================= */
+/* GENERAL SECTIONS */
 
 .section {
     padding: 85px 25px;
@@ -241,9 +233,7 @@ header {
 }
 
 
-/* ==============================
-   PROJECTS SECTION
-================================= */
+/* PROJECTS SECTION */
 
 #projects {
     background: var(--surface);
@@ -371,9 +361,7 @@ header {
 }
 
 
-/* ==============================
-   ABOUT ME
-================================= */
+/* ABOUT ME */
 
 .about-content {
     max-width: 1000px;
@@ -431,7 +419,7 @@ header {
 }
 
 .css-level {
-    width: 65%;
+    width: 55%;
 }
 
 .js-level {
@@ -443,9 +431,7 @@ header {
 }
 
 
-/* ==============================
-   CONTACT
-================================= */
+/*  CONTACT */
 
 #contact {
     background: var(--surface);
@@ -476,9 +462,7 @@ header {
 }
 
 
-/* ==============================
-   BACK TO TOP
-================================= */
+/*  BACK TO TOP */
 
 #backToTop {
     position: fixed;
@@ -501,9 +485,7 @@ header {
 }
 
 
-/* ==============================
-   FOOTER
-================================= */
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -514,9 +496,7 @@ footer {
 }
 
 
-/* ==============================
-   RESPONSIVE LAYOUT
-================================= */
+/* RESPONSIVE LAYOUT */
 
 @media (max-width: 900px) {
 
