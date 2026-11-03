@@ -79,103 +79,125 @@
 </section>
 
 
+
 <!-- Projects Section -->
 <section id="projects" class="projects">
+
     <div class="section-heading">
         <h2>My Projects</h2>
         <p>Some of my academic projects and work.</p>
     </div>
 
-    <div class="project-grid">
+    <!-- Search Box -->
+    <div class="search-box">
+        <label for="projectSearch">Search projects</label>
+        <input
+            type="text"
+            id="projectSearch"
+            placeholder="Type a project name..."
+        >
+    </div>
 
-            <div class="search-box">
-                <label for="projectSearch">Search projects</label>
-                <input type="text" id="projectSearch"
-                       placeholder="Type a project name...">
-            </div>
+    <!-- Project Cards -->
+    <div class="project-grid" id="projectGrid">
 
-            <div class="project-grid" id="projectGrid">
+        <!-- Project 1: Database System -->
+        <div class="project-card">
+            <div class="project-number">01</div>
 
- <!-- Project 1: Database System -->
-        
-<div class="project-card">
-    <div class="project-number">01</div>
+            <img
+                src="images/Database%20system.jpg"
+                alt="Database System project screenshot"
+            >
 
-    <img src="images/Database%20system.jpg"
-         alt="Database System project screenshot">
+            <h3>Database System</h3>
+            <p>
+                An academic project focused on database
+                design and database management.
+            </p>
 
-    <h3>Database System</h3>
-    <p>
-        An academic project focused on database
-        design and database management.
-    </p>
+            <span class="project-tag">Database</span>
+        </div>
 
-    <span class="project-tag">Database</span>
-</div>
-
- <!-- Project 2: HCI -->
+        <!-- Project 2: HCI -->
         <div class="project-card">
             <div class="project-number">02</div>
 
-            <img src="images/HCI.png"
-                 alt="Human Computer Interaction project screenshot">
+            <img
+                src="images/HCI.png"
+                alt="Human Computer Interaction project screenshot"
+            >
 
             <h3>Human Computer Interaction (HCI)</h3>
             <p>
                 A project focused on user interaction,
                 usability and interface design.
             </p>
-            <span class="project-tag">Database</span>
+
+            <span class="project-tag">HCI</span>
         </div>
-<!-- Project 3: MPU3222 -->
-    <div class="project-number">03</div>
+
+        <!-- Project 3: MPU3222 -->
         <div class="project-card">
-            <img src="images/MPU3222.jpg"
-                 alt="MPU3222 project screenshot">
+            <div class="project-number">03</div>
+
+            <img
+                src="images/MPU3222.jpg"
+                alt="MPU3222 project screenshot"
+            >
 
             <h3>MPU3222 Project</h3>
             <p>
                 An academic group project involving
                 entrepreneurship and business activities.
             </p>
-            <span>Entrepreneurship</span>
+
+            <span class="project-tag">Entrepreneurship</span>
         </div>
 
-<!-- Project 4: SAD -->
-<div class="project-number">04</div>
-    <div class="project-card">
-        <img src="images/SAD.png"
-            alt="System Analysis and Design project screenshot">
+        <!-- Project 4: SAD -->
+        <div class="project-card">
+            <div class="project-number">04</div>
+
+            <img
+                src="images/SAD.png"
+                alt="System Analysis and Design project screenshot"
+            >
 
             <h3>System Analysis and Design (SAD)</h3>
             <p>
                 A project involving system requirements,
                 modelling and system design.
             </p>
-            <span>System Design</span>
+
+            <span class="project-tag">System Design</span>
         </div>
 
-        <!-- Project 5: UIUX -->
-        <div class="project-number">05</div>
+        <!-- Project 5: UI/UX -->
+        <div class="project-card">
+            <div class="project-number">05</div>
 
-                <div class="project-card">
-            <img src="images/UIUX.jpg"
-                 alt="UI UX project screenshot">
+            <img
+                src="images/UIUX.jpg"
+                alt="UI UX project screenshot"
+            >
 
             <h3>UI/UX Design</h3>
             <p>
                 A project focused on creating user-friendly
                 interfaces and improving user experience.
             </p>
-            <span>UI/UX</span>
+
+            <span class="project-tag">UI/UX</span>
         </div>
 
     </div>
 
-            <p id="noProjects" class="no-projects" hidden>
-                No projects found. Try another keyword.
-            </p>
-        </section>
+    <p id="noProjects" class="no-projects" hidden>
+        No projects found. Try another keyword.
+    </p>
+
+</section>
 
         <!-- About Me Section -->
         <section id="about" class="section about-section">
